@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.fn.extend({
+				setcolor:function(){
+					this.css('color','red');
+				},
+				over:function(option){
+					var defaults={
+						//默认参数
+						'bgcolor':'#d8d8d8',
+						'Size':40
+					}
+					var setting=$.extend(defaults,option);
+					this.mouseover(function(){
+						$(this).css({
+							'background':setting.bgcolor,
+							'fontSize':setting.Size
+						});
+					});
+				},
+				out:function(){
+					this.mouseout(function(){
+						$(this).css({
+							'background':'#fff',
+							'fontSize':20
+						});
+					});
+				}
+			});
+			
+			
+			$(function(){
+				$('li').setcolor();
+				$('li').over();//配置参数
+				$('li').out();
+			});
+			
+			
+			//有配置参数，就用配置参数，没有才用默认参数    足球  主角  替补
+			
+			//合并对象
+//			$.extend({a:1,b:2},{a:4,c:7},{b:6});
+//			console.log($.extend({a:1,b:2},{a:4,c:7},{b:6}));//{a:4,b:6,c:7}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>兄弟1</li>
+			<li>兄弟2</li>
+			<li>兄弟3</li>
+			<li>兄弟4</li>
+			<li>兄弟5</li>
+			<li>兄弟6</li>
+		</ul>
+	</body>
+</html>

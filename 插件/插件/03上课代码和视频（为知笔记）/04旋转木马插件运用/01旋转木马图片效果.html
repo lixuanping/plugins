@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border: 0;
+			}
+			
+			.poster-main {
+				width: 1000px;
+				height: 500px;
+				position: relative;
+				margin: 30px auto;
+			}
+			
+			.poster-main a,
+			.poster-main img {
+				display: block;
+			}
+			
+			.poster-main .poster-list {
+				width: 1000px;
+				height: 500px;
+			}
+			
+			.poster-main .poster-list .poster-item {
+				width: 200px;
+				height: 500px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			.poster-main .poster-btn {
+				position: absolute;
+				top: 0;
+				z-index: 10;
+				cursor: pointer;
+			}
+			
+			.poster-main .poster-prev-btn {
+				left: 0;
+				background: url(img/left.png) no-repeat center center;
+			}
+			
+			.poster-main .poster-next-btn {
+				right: 0;
+				background: url(img/right.png) no-repeat center center;
+			}
+		</style>
+		
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/PicCarousel.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				$(".A_Demo").PicCarousel({
+					"width": 1000, //幻灯片的宽度
+					"height": 300, //幻灯片的高度
+					"posterWidth": 520, //幻灯片第一帧的宽度
+					"posterHeight": 300, //幻灯片第一张的高度
+					"scale": 0.9, //记录显示比例关系
+					"speed": 1500, //记录幻灯片滚动速度
+					"autoPlay": true, //是否开启自动播放
+					"delay": 1000, //自动播放间隔
+					"verticalAlign": "top" //图片对齐位置
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="poster-main A_Demo">
+			<div class="poster-btn poster-prev-btn"></div>
+			<ul class="poster-list">
+				<li class="poster-item">
+					<a href="#"><img src="img/1.jpg" width="100%"></a>
+				</li>
+				<li class="poster-item">
+					<a href="#"><img src="img/2.jpg" width="100%"></a>
+				</li>
+				<li class="poster-item">
+					<a href="#"><img src="img/3.jpg" width="100%"></a>
+				</li>
+				<li class="poster-item">
+					<a href="#"><img src="img/4.jpg" width="100%"></a>
+				</li>
+				<li class="poster-item">
+					<a href="#"><img src="img/5.jpg" width="100%"></a>
+				</li>
+				<li class="poster-item">
+					<a href="#"><img src="img/6.jpg" width="100%"></a>
+				</li>
+				<li class="poster-item">
+					<a href="#"><img src="img/7.jpg" width="100%"></a>
+				</li>
+			</ul>
+			<div class="poster-btn poster-next-btn"></div>
+		</div>
+	</body>
+
+</html>

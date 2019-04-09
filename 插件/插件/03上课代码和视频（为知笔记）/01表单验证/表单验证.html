@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			$(function() {
+				$('#user_inf').validate();
+			});
+		</script>
+	</head>
+
+	<body>
+		<form action="" method="post" id="user_inf">
+			<p>
+				<label for="name">用户名：</label><em>*</em>
+				<input type="" name="name" id="name" value="" class="required" />
+			</p>
+			<p>
+				<label for="mail">邮箱地址：</label><em>*</em>
+				<input type="text" id="mail" name="mail" class="required email" />
+			</p>
+			<p>
+				<label for="pwd">密码：</label><em>*</em>
+				<input type="password" id="pwd" name="pwd" class="required" minlength="6" />
+			</p>
+			<p>
+				<label for="ckpwd">确认密码</label><em>*</em>
+				<input type="password" id="ckpwd" name="ckpwd" class="required" minlength="6" equalTo="pwd" />
+			</p>
+			<input type="submit" value="提交" />
+		</form>
+	</body>
+
+</html>

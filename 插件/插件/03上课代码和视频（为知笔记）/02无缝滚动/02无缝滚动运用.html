@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border: 0;
+			}
+			
+			#marquee1 {
+				width: 324px;
+				height: 162px;
+				overflow: hidden;
+				margin: 50px;
+			}
+			
+			#marquee1 li {
+				float: left;
+				width: 150px;
+				border: 1px solid #ddd;
+				padding: 5px;
+			}
+			
+			#marquee1 li img {
+				display: block;
+			}
+			
+			
+			
+			
+		</style>
+		<script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Marquee.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#marquee1').Marquee({
+					isAuto:false,
+					distance: 324, //每次移动162px
+					time: 3, //延时时间3秒
+					btnGo: {
+						left: '#left',
+						right: '#right'
+					},
+					direction: 'left' //方向
+
+				});
+				
+				
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="marquee1">
+			<ul>
+				<li>
+					<a href="javascript:"><img src="images/1.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="javascript:"><img src="images/2.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="javascript:"><img src="images/3.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="javascript:"><img src="images/4.jpg" alt="" /></a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<p>
+				<a href="javascript:" id="left">上一个</a>
+			</p>
+			<p>
+				<a href="javascript:" id="right">下一个</a>
+			</p>
+		</div>
+
+	</body>
+
+</html>

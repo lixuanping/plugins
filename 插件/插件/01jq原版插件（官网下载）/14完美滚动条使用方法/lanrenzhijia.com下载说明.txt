@@ -1,0 +1,20 @@
+cursorcolor	光标颜色	＃000000
+cursoropacitymin	改变不透明度非常光标处于非活动状态（scrollabar“隐藏”状态），范围从1到0	0 隐藏
+cursoropacitymax	改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0	1 完全不透明
+cursorwidth	像素光标的宽度	5
+cursorborder	游标边框css定义	1px solid ＃FFF
+cursorborderradius	以像素为光标边界半径	-
+zIndex	改变z-index值的滚动条的div	9999
+scrollspeed	滚动速度	60
+mousescrollstep	高速滚动鼠标滚轮	40
+touchbehavior	使光标拖动滚动像在台式电脑触摸设备	false
+hwacceleration	使用硬件加速滚动支持的时候	true
+boxzoom	使变焦框中的内容	false
+dblclickzoom	（仅当boxzoom = TRUE）变焦激活时，双击对话框	true
+gesturezoom	（仅当boxzoom =真实，使用触摸设备）上缩放框激活时，间距输出/输入	true
+autohidemode	是否隐藏滚动条	true
+horizrailenabled	nicescroll可以管理水平滚动	true
+railalign	取向垂直导轨	右
+railvalign	对齐水平导轨	底部
+enablekeyboard	nicescroll可以管理键盘事件	true
+smoothscroll	滚动自如移动	true

@@ -1,0 +1,6 @@
+import rem from './js/rem.js'//引入rem
+rem()//使用rem
+还要在编辑器设置那里搜索cssrem  把下面的比例换成100 然后重启编辑器 注意编辑器是visual Code
+
+引入css样式
+@import url("../css/cards.css");

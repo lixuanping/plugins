@@ -1,0 +1,11 @@
+在两个页面都要引入
+import store from "../../utils/store.js";
+
+store.emit("suibian", {
+      name: "llll"
+})
+
+另外一个页面
+ store.on("suibian", (aaa) => {
+      console.log(aaa)
+ })

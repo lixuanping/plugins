@@ -1,0 +1,35 @@
+// 点击添加到购物车实现飞入动画效果
+            $('.list ul').on('click','li',function(event){
+                event = event || window.event;     
+                let target = event.target || event.srcElement;
+                if(target.className==='btn'){
+                    $(function(){
+                        // 飞入到哪个地方？  但是这个没生效 所以直接写死购物车的位置
+                        var offset = $("#cart").offset();
+                        // 获取到照片的路径
+                        var img = target.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.src;
+                        // 执行插件
+                        var flyer = $('<img class="u-flyer" src="'+img+'">');
+                        flyer.fly({
+                            start:{
+                                //（光标的位置）当前点击的位置（必填）#fly元素会被设置成position: fixed  不能用page  页面长的时候出现了滚动条 
+                                left: event.clientX, 
+                                top: event.clientY //开始位置（必填）
+                            },
+                            end:{
+                                left: innerWidth, //结束位置（必填）
+                                top: 250, //结束位置（必填）
+                                width: 0, //结束时宽度
+                                height: 0 //结束时高度
+                            },
+                            onEnd: function(){ //结束回调 执行提示信息
+                               $(".msg").show().animate({width: '250px'}, 200).fadeOut(1000); 
+                            }
+                        });
+                    });
+                }   
+            })
+
+
+必须要加的css样式
+.u-flyer{display: block;width: 50px;height: 50px;border-radius: 50px;position: fixed;z-index:9999;}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/nivo-slider.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border: 0;
+			}
+			
+			.box {
+				width: 938px;
+				height: 408px;
+				margin: 50px auto;
+				position: relative;
+			}
+			
+			#slider {
+				/*图片的尺寸*/
+				width: 938px;
+				height: 408px;
+				margin: 50px auto;
+				position: relative;
+			}
+			
+			#slider li img {
+				display: block;
+				width: 938px;
+				height: 408px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			.nivo-controlNav {
+				/*隐藏123轮播按钮*/
+				display: none;
+			}
+			
+			.nivo-directionNav a {
+				/*隐藏左右按钮里面的文字*/
+				border: 0px currentColor;
+				width: 22px;
+				height: 24px;
+				text-indent: -9999px;
+				display: block;
+			}
+		</style>
+		<script src="js/jquery-1.6.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.nivo.slider.pack.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#slider').nivoSlider({
+					effect: 'fold', //百叶窗效果
+					slices: 30, //图片被切割成30片
+					animSpeed: 500, //图片切换时间为0.5秒
+					pauseTime: 5000, //图片延时5秒，就是有5秒时间看图，一般设置5-7秒比较合适
+					controlNav: false, //是否需要外部按钮控制方向，这里我就不要了false
+					//directionNavHide: false,//是否需要鼠标移入显示左右按钮，false一开始就出现按钮	
+					startSlide: 0, //从第一个图开始轮播
+					directionNav: true, //是否使用左右按钮
+					afterLoad: function() {
+						$(".nivo-caption").animate({
+							top: "60"
+						}, {
+							easing: "easeOutBack",
+							duration: 500
+						})
+					},
+					beforeChange: function() { //图片切换前，nivo-caption放在上面-300px位置
+						$(".nivo-caption").animate({
+							top: "-300"
+						}, {
+							easing: "easeInBack", //弹力动画效果
+							duration: 500 //掉下来的速度是500毫秒
+						})
+					},
+					afterChange: function() { //图片加载后，nivo-caption运动到60px，就像从上面掉下来一样
+						$(".nivo-caption").animate({
+							top: "60"
+						}, {
+							easing: "easeOutBack",
+							duration: 500
+						})
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="box">
+			<ul id="slider">
+				<li>
+					<a href="javascript:"><img title="#htmlcaption1" src="images/slider1.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="javascript:"><img title="#htmlcaption2" src="images/slider2.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="javascript:"><img title="#htmlcaption3" src="images/slider3.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="javascript:"><img title="#htmlcaption4" src="images/slider4.jpg" alt="" /></a>
+				</li>
+			</ul>
+			<!--这里是文字块-->
+			<div id="htmlcaption1" class="nivo-html-caption">
+				<span class="sdate">2013-11-10</span>
+				<h1>这是我改写的特效效果</h1>
+				<hr>
+				<p>插件的学习插件的学习插件的学习插件的学习插件的学习插件的学习插件的学习教程 </p>
+			</div>
+
+			<div id="htmlcaption2" class="nivo-html-caption">
+				<span class="sdate">2013-11-11</span>
+				<h1>这是我改写的特效效果</h1>
+				<hr>
+				<p>插件的学习插件的学习插件的学习插件的学习插件的学习插件的学习插件的学习教程 </p>
+			</div>
+
+			<div id="htmlcaption3" class="nivo-html-caption">
+				<span class="sdate">2013-11-12</span>
+				<h1>这是我改写的特效效果</h1>
+				<hr>
+				<p>插件的学习插件的学习插件的学习插件的学习插件的学习插件的学习插件的学习教程 </p>
+			</div>
+
+			<div id="htmlcaption4" class="nivo-html-caption">
+				<span class="sdate">2013-11-13</span>
+				<h1>这是我改写的特效效果</h1>
+				<hr>
+				<p>插件的学习插件的学习插件的学习插件的学习插件的学习插件的学习插件的学习教程 </p>
+			</div>
+		</div>
+
+	</body>
+
+</html>

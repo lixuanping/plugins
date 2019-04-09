@@ -1,0 +1,51 @@
+body{ margin:0; padding:0; font-size:12px; height:100%;}
+ul,li,ol,h1,h2,h3,h4,h5,h6,span,dl,dt,dd,p,input,textarea,strong,a,form,table,tr,td{ margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6{ font-size:12px; font-weight:normal;}
+li{ list-style-type:none;}
+a{ text-decoration:none; blr:expression(this.onFocus=this.blur())}/*去掉a标签的虚线框，避免出现奇怪的选中区域*/
+:focus{outline:0;}
+img{ border:none;}
+.clear{ clear:both; height:0; overflow:hidden;}
+.fl{ float:left;}
+.fr{ float:right;}
+
+/*切换样式*/
+.home_ad{ width: 728px;overflow: hidden; margin:50px auto}
+.home_ad .picScroll-left{width: 728px;}
+.home_ad .picScroll-left .ad_title{ border-bottom:1px solid #dee2e6;  border-top: 2px solid red; height: 24px; padding: 10px;overflow: hidden; margin-top: 5px;}
+.home_ad .picScroll-left .ad_title span{ float: left; font-size: 20px; color: red;}
+.home_ad .picScroll-left .ad_title .hd{ float: right; width: 90px; position: relative;}
+.home_ad .picScroll-left .ad_title .hd a{cursor: pointer; width: 18px; height: 18px; display: block; position: absolute;}
+.home_ad .picScroll-left .ad_title .hd a.next{background: url("../images/icon-forward_ee579597.jpg") no-repeat; right: 0px;}
+.home_ad .picScroll-left .ad_title .hd a.prev{background: url("../images/icon-backward_30ac881d.jpg") no-repeat; left: 0px;}
+.home_ad .picScroll-left .ad_title .hd a.prevStop{opacity:.5;filter:alpha(opacity=50)}
+.home_ad .picScroll-left .ad_title .hd a.nextStop{opacity:.5;filter:alpha(opacity=50)}
+.home_ad .picScroll-left .ad_title .hd ul{ margin-left: 21px; text-indent: 99999px;}
+.home_ad .picScroll-left .ad_title .hd ul li{ width: 23px; height: 18px; float:left; cursor:pointer; background: url("../images/icon-pagenation_8b2f0f92.jpg") no-repeat center;}
+.home_ad .picScroll-left .ad_title .hd ul li.on{background: url("../images/icon-pagenation-current_ad0a381a.jpg") no-repeat center;}
+
+.home_ad .picScroll-left .bd .picList li {
+    float: left; display: inline; background: #fff; padding: 8px; position: relative; box-shadow: 0 1px 3px rgba(0,0,0,0.1);}
+.home_ad .picScroll-left .bd{ padding:0 5px; }
+.home_ad .picScroll-left .bd ul{ overflow:hidden; zoom:1; }
+.home_ad .picScroll-left .bd ul li{ margin:; float:left; _display:inline; overflow:hidden; text-align:center;  }
+.home_ad .picScroll-left .bd ul li { text-align:center; }
+.home_ad .picScroll-left .bd ul li img{ width:216px; height: 168px; display:block;  padding:2px; border:1px solid #ccc; }
+.home_ad .picScroll-left .bd ul li a:hover img{ border-color:#999;  }
+.home_ad .picScroll-left .bd ul li .title{ line-height:24px;   }
+
+/*鼠标悬停*/
+.da-thumbs li a,.da-thumbs li a img { display: block; position: relative;}
+.da-thumbs li a { overflow: hidden;}
+.da-thumbs li a div { position: absolute; background:#000; width: 100%; height:174px; overflow:hidden; opacity:.8; filter:alpha(opacity=80);}
+.da-thumbs li a div.da-animate { -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;}
+/* Initial state classes: */
+.da-slideFromTop { left: 0px; top: -100%;}
+.da-slideFromBottom { left: 0px; top: 100%;}
+.da-slideFromLeft { top: 0px; left: -100%;}
+.da-slideFromRight { top: 0px; left: 100%;}
+/* Final state classes: */
+.da-slideTop { top: 0px;}
+.da-slideLeft { left: 0px;}
+.da-thumbs li a div span { display: block;position: relative;}
+.home_ad .picScroll-left .bd .da-thumbs li a div span img { width: 142px; height: 48px; border: 0; position: absolute; left: 40px; top: 60px;}

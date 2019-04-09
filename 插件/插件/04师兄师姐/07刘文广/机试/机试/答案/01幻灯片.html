@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				border: 0;
+			}
+			
+			#box {
+				width: 450px;
+				height: 230px;
+				position: relative;
+				margin: 50px;
+			}
+			
+			#marquee {
+				width: 450px;
+				height: 230px;
+				overflow: hidden;
+			}
+			
+			#marquee li {
+				width: 450px;
+				height: 230px;
+			
+			}
+			
+			#marquee li img {
+				width: 450px;
+				height: 230px;
+				display: block;
+			}
+			
+			#btn {
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+			}
+			
+			#btn li {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 20px;
+				background: #fff;
+				font-size: 14px;
+				float: left;
+				margin-right: 15px;
+			}
+			
+			#btn li.active {
+				background: orange;
+				color: #fff;
+			}
+			
+			#up{
+				width: 18px;
+				height: 32px;
+				
+				position: absolute;
+				left: 20px;
+				top: 100px;
+				background: url(images/slider-arrow.png) no-repeat -116px 0;
+			}
+			#down{
+				width: 18px;
+				height: 32px;
+				
+				position: absolute;
+				right: 20px;
+				top: 100px;
+				background: url(images/slider-arrow.png) no-repeat 0 0;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="../js/Marquee.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#marquee').Marquee({
+					distance:230,
+					time:3,
+					direction:'up',
+					btnGo:{//按钮
+						up:'#up',
+						down:'#down'
+					},
+					navId:'#btn'
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		<div id="box">
+			<div id="marquee">
+				<ul>
+					<li>
+						<a href="javascript"><img src="images/pic1.jpg" /></a>
+					</li>
+					<li>
+						<a href="javascript"><img src="images/pic2.jpg" /></a>
+					</li>
+					<li>
+						<a href="javascript"><img src="images/pic3.jpg" /></a>
+					</li>
+					
+				</ul>
+			</div>
+			<div id="btn">
+
+			</div>
+			<div id="but">
+				<p><a href="javascript:" id="up"></a></p>
+				<p><a href="javascript:" id="down"></a></p>
+			</div>
+		</div>
+
+	</body>
+
+</html>

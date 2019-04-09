@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="public/script/jquery.min.js"></script>
+        <script type="text/javascript" src="code/jquery.citys.js"></script>
+	</head>
+	<body>
+		 <div id="demo2" class="citys">
+                <p>
+                    <select name="province"></select>
+                    <select name="city"></select>
+                    <select name="area"></select>
+                </p>
+                <p id="place">请选择地区</p>
+            </div>
+             <script type="text/javascript">
+                $('#demo2').citys({
+                    required:false,
+                    nodata:'disabled',
+                    onChange:function(data){
+                        var text = data['direct']?'(直辖市)':'';
+                        $('#place').text('当前选中地区：'+data['province']+text+' '+data['city']+' '+data['area']);
+                    }
+                });
+            </script>
+	</body>
+</html>

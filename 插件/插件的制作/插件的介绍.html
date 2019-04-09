@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.10.1.min.js"></script>
+		<script type="text/javascript">
+			//插件的制作 ：方法一 (全局方法，工具方法)
+			
+			$.extend({
+				sayHello:function(){
+					alert('我们班很多九零后');
+				}
+			});
+			
+			
+			$.sayHello();
+			
+			//方法二：
+			$.fn.extend({
+				sayHelloworld:function(){
+					alert('Helloworld');
+				}
+			});
+			//局部方法：操作dom节点
+			$('html').sayHelloworld();
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

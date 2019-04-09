@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border: 0;
+			}
+			
+			#marquee1 {
+				width: 324px;
+				height: 162px;
+				overflow: hidden;
+				margin: 50px;
+			}
+			
+			#marquee1 li {
+				float: left;
+				width: 150px;
+				border: 1px solid #ddd;
+				padding: 5px;
+			}
+			
+			#marquee1 li img {
+				display: block;
+			}
+			
+			/*#box{
+				width: 620px;
+				height: 340px;
+				overflow: hidden;
+				position: relative;
+			}
+			#img{
+				width: 620px;
+				height: 340px;
+				overflow: hidden;
+			}
+			#box #imglist li{
+				float: left;
+			}
+			#box #imglist li img{
+				display: block;
+			}
+			#box #btn{
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+			}
+			#box #btn li{
+				width: 16px;
+				height: 16px;
+				text-align: center;
+				line-height: 16px;
+				background: #888888;
+				border: solid yellow 1px;
+				font-size: 12px;
+				float: left;
+				margin-right: 2px;
+			}
+			#box #btn li.active{
+				background: orange;
+			}*/
+			
+			#box{
+				width: 620px;
+				height: 340px;
+				position: relative;
+			}
+			#marquee2{
+				width: 620px;
+				height: 340px;
+				overflow: hidden;
+			}
+			#marquee2 li{
+				width: 620px;
+				height: 340px;
+				float: left;
+			}
+			#btn{
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+			}
+			#btn li{
+				width: 16px;
+				height: 16px;
+				text-align: center;
+				line-height: 16px;
+				background: #888888;
+				border: solid yellow 1px;
+				font-size: 12px;
+				float: left;
+				margin-right: 2px;
+			}
+			#btn li.active{
+				background: orange;
+			}
+		</style>
+		<script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Marquee.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#marquee1').Marquee({
+					distance: 162, //每次移动162px
+					time: 3, //延时时间3秒
+					btnGo: {
+						left: '#left',
+						right: '#right'
+					},
+					direction: 'left' //方向
+
+				});
+				
+				$('#marquee2').Marquee({
+					distance: 620, //每次移动620px
+					time: 3, //延时时间3秒
+					direction: 'left', //方向
+					navId:'#btn' //自动添加选项卡按钮，所以下面不用写li，会自动创建节点
+				});
+//				$('#img').Marquee({
+//					distance:620,
+//					time:3,
+//					navId:'#btn',
+//					direction:'left'
+//				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="marquee1">
+			<ul>
+				<li>
+					<a href="javascript:"><img src="images/1.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="javascript:"><img src="images/2.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="javascript:"><img src="images/3.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="javascript:"><img src="images/4.jpg" alt="" /></a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<p>
+				<a href="javascript:" id="left">上一个</a>
+			</p>
+			<p>
+				<a href="javascript:" id="right">下一个</a>
+			</p>
+		</div>
+<!--这里是轮播图-->
+		
+		<div id="box">
+			<div id="marquee2">
+				<ul id="imglist">
+					<li><a href="javascript:"><img src="images/big/1.jpg" alt="" /></a></li>
+					<li><a href="javascript:"><img src="images/big/2.jpg" alt="" /></a></li>
+					<li><a href="javascript:"><img src="images/big/3.jpg" alt="" /></a></li>
+					<li><a href="javascript:"><img src="images/big/4.jpg" alt="" /></a></li>
+				</ul>
+			</div>
+			<div id="btn">
+				<!--<ul>
+					<li class="active">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>-->
+			</div>
+		</div>
+	</body>
+
+</html>

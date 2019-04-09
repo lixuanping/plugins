@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				text-decoration: none;
+				color:#4c4c4c;
+			}
+			.bar {
+				width: 600px;
+				height: 41px;
+				margin: 100px auto;
+				background: #fcfcfc;
+				border-top: 4px solid #ff8500;
+				border-bottom: 1px solid #edeef0;
+				padding-left: 20px;
+			}
+			
+			#list>li {
+				float: left;
+				height: 42px;
+				font: 14px/40px "微软雅黑";
+				position: relative;
+			}
+			
+			#list>li>ul {
+				position: absolute;
+				top: 42px;
+				left: 0;
+				display: none;
+			}
+			#list>li ul>li {
+				border: 1px solid #ebbe7a;
+				border-top: 0px;
+				height: 30px;
+				line-height: 30px;
+				width: 100px;
+			}
+			#list>li>a{
+				display: block;
+				height: 42px;
+				line-height: 42px;
+				padding: 0 15px;
+				color:#000000;
+			}
+			#list>li>a:hover{
+				background: #edeef0;
+				color: #e67902;
+			}
+			.child>li a{
+				display: block;
+				padding:0 15px;
+			}
+			.child>li a:hover {
+				background: #fff5da;
+				color: #e67902;
+			}
+		</style>
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				function nav(id,child){
+					$('#'+id+' li').hover(function(){
+						$(this).find('.'+child+'').show();
+					},function(){
+						$(this).find('.'+child+'').hide();
+					});
+				}
+				
+				nav('list','child');
+				
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="bar">
+			<ul id="list" class="list">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">手机新浪网</a></li>
+				<li>
+					<a href="#">邮箱</a>
+					<ul class="child">
+						<li><a href="#">私信</a></li>
+						<li><a href="#">评论</a></li>
+						<li><a href="#">@我</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">微博</a>
+					<ul class="child">
+						<li><a href="#">博客里评论</a></li>
+						<li><a href="#">未读提醒</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">微博</a>
+					<ul class="child">
+						<li><a href="#">博客里评论</a></li>
+						<li><a href="#">未读提醒</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">微博</a>
+					<ul class="child">
+						<li><a href="#">博客里评论</a></li>
+						<li><a href="#">未读提醒</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

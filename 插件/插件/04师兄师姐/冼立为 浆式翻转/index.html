@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>浆式翻转</title>
+    <link rel="stylesheet" type="text/css" href="css/show.css"/>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/plugins.js" type="text/javascript" charset="utf-8"></script>
+   	<style type="text/css">
+   		#box{width: 1050px;height: 360px;}  /*设置盒子的宽高，跟图片一样*/
+   		#show{perspective: 800px;}    /*设置显示区的景深*/
+   		#show div .em1{background: url(img/1.png);}    /*设置每块div前图背景,图片路径跟img一样*/
+   		#show div .em2{background: url(img/2.png);}	   /*设置每块div后图背景,图片路径跟img一样*/
+   	</style>
+   	<script type="text/javascript">
+   		slices=10;           //切出来的块数
+   	</script>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><img src="img/1.png"/></li>
+        <li><img src="img/2.png"/></li>
+        <li><img src="img/3.png"/></li>
+        <li><img src="img/4.png"/></li>
+        <li><img src="img/5.png"/></li>
+    </ul>
+    <div id="show"></div>
+</div>
+	<input type="button" id="prev" value="上一张"/>
+	<input type="button" id="next" value="下一张"/>
+</body>
+</html>

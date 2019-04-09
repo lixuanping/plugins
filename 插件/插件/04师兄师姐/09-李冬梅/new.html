@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zoomio.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zzsc-demo.css"/>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zoomio.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.pic').zoomio();
+			})
+		</script>
+		<style type="text/css">
+			*{margin: 0;padding: 0;border: 0;}
+			#box{width: 700px;margin: 100px auto;}
+			.pic{width: 300px;height: auto;margin-right: 20px;}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="img/bluewall.jpg" class="pic"/>
+			<img src="img/carandgirl.jpg" class="pic"/>
+		</div>
+	</body>
+</html>

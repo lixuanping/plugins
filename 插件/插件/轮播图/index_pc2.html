@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>pc轮播图</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.swiper-container {
+				width: 600px;
+				height: 350px;
+				background: #ccc;
+			}
+			
+			.swiper-slide {
+				font-size: 60px;
+				text-align: center;
+				line-height: 300px;
+			}
+			
+			.swiper-pagination-bullet {
+				width: 20px;
+				height: 20px;
+				text-align: center;
+				line-height: 20px;
+				color: #fff;
+				background: #666;
+				font-size: 12px;
+			}
+			
+			.swiper-pagination-bullet-active {
+				color: #fff;
+				background: orangered;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="swiper-container" id="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background: lavender;">1</div>
+				<div class="swiper-slide" style="background: lavenderblush;">2</div>
+				<div class="swiper-slide" style="background: lawngreen;">3</div>
+				<div class="swiper-slide" style="background: lemonchiffon;">4</div>
+				<div class="swiper-slide" style="background: lightcoral;">5</div>
+			</div>
+			<!--按钮-->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+			<!--分页-->
+			<div class="swiper-pagination"></div>
+		</div>
+		<script type="text/javascript">
+			var s1 = new Swiper('.swiper-container', {
+				autoplay: { //自动轮播+延时两秒
+					delay:2000,
+					disableOnInteraction:false
+				},
+				loop: true,//无缝回路轮播
+				speed: 500,//切换速度
+				navigation: {//上下按钮
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
+				},
+				pagination: {//焦点跟随
+					el: '.swiper-pagination',
+					clickable: true,//点击焦点跳到指定图片
+					renderBullet: function(index, className) {
+						return '<span class="' + className + '">' + (index + 1) + '</span>';//生成焦点数字
+					}
+				},
+				mousewheel:true//滚动滑轮可以切图
+
+			});
+			
+			var oBox=document.getElementById('swiper-container');
+			
+			oBox.onmouseover=function(){//鼠标经过停止
+				s1.autoplay.stop();
+			}
+			
+			oBox.onmouseout=function(){//鼠标经过离开
+				s1.autoplay.start();
+			}
+		</script>
+	</body>
+
+</html>

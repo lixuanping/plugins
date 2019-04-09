@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/xq.css"/>
+		<link rel="stylesheet" type="text/css" href="css/xq_navbar.css"/>
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/xq_navbar.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="xq_bag">
+			<ul class="xq_navbar">
+				<li class="xq_navli"><a href="#">java</a></li>
+				<li class="xq_navli"><a href="#">php</a></li>
+				<li class="xq_navli"><a href="#">c#</a></li>
+				<li class="xq_navli"><a href="#">photoshop</a></li>
+				<li class="xq_navli"><a href="#">c++</a></li>
+				<li class="xq_navli"><a href="#">html</a></li>
+				<li class="xq_navli"><a href="#">javascript</a></li>
+				
+			</ul>
+		</div>	
+	</body>
+	
+	<script type="text/javascript">
+		$(function(){			
+			$(".xq_bag").xq_navbar({
+				"type":"beat",
+				"liwidth":"avg", 
+				"bgcolor":"#000",
+				"hcolor":"#f0f"
+				});
+			
+		});
+	</script>
+</html>

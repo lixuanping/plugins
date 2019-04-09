@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/nivo-slider.css"/>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin-bottom: 2px;
+			}
+		</style>
+		<script src="js/jquery-1.6.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+		$(function(){
+//			
+			
+			$('input').click(function(){
+				$('#div1').animate({width:"300"}, {easing:"swing", duration: 500});
+				$('#div2').animate({width:"300"}, {easing:"linear", duration: 500});
+				$('#div3').animate({width:"300"}, {easing:"easeOutBack", duration: 500});
+				$('#div4').animate({width:"300"}, {easing:"easeInBack", duration: 500});
+				
+			});
+		});
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btn" value="点击" />
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<div id="div3"></div>
+		<div id="div4"></div>
+	</body>
+</html>

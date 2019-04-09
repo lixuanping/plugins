@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!-- <center><img src="img/logo.png"></img></center> -->
+ 
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/h5bp.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <section class="info">
+            
+
+        </section>
+        <section class="file-select">
+            <div class="file-select-button">
+                <label for="file-select-input">选择一张图片</label>
+                <input type="file" id="file-select-input" name="fileselect[]" multiple="multiple" />
+            </div>
+            <div id="filedrag">获取拖拽一张图片放到这里</div>
+            <!-- <span id="filedrag"></span> -->
+        </section>
+        <section class="results">
+            <div id="error"></div>
+        
+            <div id="output"></div>
+
+        </section>
+        <footer>
+            <p><b>HEX 转换成 RGB</b></p>
+            <input type="text" id="hex-input" placeholder="hex 输入在这" />
+            <button id="magic-button">点击转换</button>
+            <div id="rgb-output" style="font-size:23px;color:red;"></div>
+            <br>
+        </footer>
+    </main>
+    <!-- build:js -->
+    <script src="js/helper.js"></script>
+    <script src="js/palette.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#magic-button").click(function () {
+                $("#rgb-output").html(hex2rgb($("#hex-input").val()));
+            });
+
+            $("#hex-input").keyup(function (event) {
+                if (event.keyCode == 13) {
+                    $("#magic-button").click();
+                }
+            });
+            //no right click
+            $(document).bind("contextmenu", function (e) {
+                alert('Right click is disabled');
+                e.preventDefault(); //or  return false; //
+            });
+        });
+
+        function hex2rgb(colour) {
+            var r, g, b;
+            if (colour.charAt(0) == '#') {
+                colour = colour.substr(1);
+            }
+            if (colour.length == 3) {
+                colour = colour.substr(0, 1) + colour.substr(0, 1) + colour.substr(1, 2) + colour.substr(1, 2) + colour.substr(2, 3) + colour.substr(2, 3);
+            }
+            r = colour.charAt(0) + '' + colour.charAt(1);
+            g = colour.charAt(2) + '' + colour.charAt(3);
+            b = colour.charAt(4) + '' + colour.charAt(5);
+            r = parseInt(r, 16);
+            g = parseInt(g, 16);
+            b = parseInt(b, 16);
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+    </script>
+</body>
+</html>

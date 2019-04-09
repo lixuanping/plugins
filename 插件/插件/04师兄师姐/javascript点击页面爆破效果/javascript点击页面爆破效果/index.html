@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>兔子</title>
+    <style>
+		body{padding:0; margin:0;background:url(images/s1.png) right bottom fixed no-repeat; background-color:#F0F0F0;}
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" src="js/rabbit.js"></script>
+    <script>
+	function create_rabbit(e){
+		var s=new HoverRabbit();
+		s.start();
+		
+	}
+	if(window.attachEvent) window.create_rabbit();
+	else window.addEventListener("load",create_rabbit);
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border: 0;
+			}
+			
+			
+			#marquee1{
+				width: 400px;
+				height: 50px;
+				border: 1px solid #d8d8d8;
+				overflow: hidden;
+				margin: 50px;
+				
+			}
+			#marquee1 li{
+				height: 25px;
+				line-height: 25px;
+			}
+			
+			
+		</style>
+		<script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Marquee.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#marquee1').Marquee({
+					isMarquee:true,//自动滚动
+					isEqual:false,//所有滚动的元素长宽是否相等：否
+					scrollDelay:20,//时长，单位为毫秒
+					controlBtn:{up:'#up',down:'#down'},//按钮控制滚动方向	
+					direction: 'up' //方向
+
+				});
+				
+				
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="marquee1">
+			<ul>
+				<li>
+					<a href="javascript:">间隙上下文字自动滚动 支持左右自动滚动1</a>
+				</li>
+				<li>
+					<a href="javascript:">间隙上下文字自动滚动 支持左右自动滚动2</a>
+				</li>
+				<li>
+					<a href="javascript:">间隙上下文字自动滚动 支持左右自动滚动3</a>
+				</li>
+				<li>
+					<a href="javascript:">间隙上下文字自动滚动 支持左右自动滚动4</a>
+				</li>
+				<li>
+					<a href="javascript:">间隙上下文字自动滚动 支持左右自动滚动5</a>
+				</li>
+				<li>
+					<a href="javascript:">间隙上下文字自动滚动 支持左右自动滚动6</a>
+				</li>
+				<li>
+					<a href="javascript:">间隙上下文字自动滚动 支持左右自动滚动7</a>
+				</li>
+				<li>
+					<a href="javascript:">间隙上下文字自动滚动 支持左右自动滚动8</a>
+				</li>
+				<li>
+					<a href="javascript:">间隙上下文字自动滚动 支持左右自动滚动9</a>
+				</li>
+				<li>
+					<a href="javascript:">间隙上下文字自动滚动 支持左右自动滚动10</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<p>
+				<a href="javascript:" id="up">上一个</a>
+			</p>
+			<p>
+				<a href="javascript:" id="down">下一个</a>
+			</p>
+		</div>
+
+	</body>
+
+</html>

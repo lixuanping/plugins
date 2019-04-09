@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jquery.nicescroll完美滚动条使用方法</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			body {
+				height: 2000px;
+			}
+			
+			#lanrenzhijia {
+				width: 500px;
+				height: 300px;
+				margin: 10px auto;
+				padding-right: 12px;
+				background: #808080;
+				overflow: hidden;
+			}
+			
+			#lanrenzhijia p {
+				color: #fff;
+				font-size: 12px;
+				line-height: 220%;
+				text-align: left;
+				text-indent: 2em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="lanrenzhijia">
+			<p>
+				牧尘听得此话，倒是微微怔了怔，北灵之原是北灵境内相当闻名的一处险地，其中地域辽阔，更是遍布着各种凶猛灵兽，时不时的会有着探险队伍进入其中，猎取灵兽，而且北灵之原内，还有着不少珍稀的材料以及灵药，说起来算是一座宝地，当然，想要取宝，前提是你必须拥有着足够的实力，不然的话，恐怕宝贝得不到，还得将小命留在那里。
+			</p>
+			<p>因为北灵之原资源丰富的原因，有时候就连牧尘的父亲，都会亲自率领手下进入北灵之原，而每一次的进入，都必然会拥有着相当惨烈的厮杀。</p>
+			<p>“蕴灵丹？”牧尘这才微微惊了一下，这种灵丹据说对他们这种修炼方才起步的初学者极有好处，灵丹药力温和，不会留下任何的后遗症，类似他灵动境中期的实力，若是服用的话，或许能够在挺快的时间内冲击到灵动境后期。</p>
+			<p>“求之不得，不过到时候万一没获得晕灵丹，你可不能怪我拖后腿。”牧尘笑了笑，他所说的倒并非是客套话，毕竟他眼下看上去就灵动境中期的实力，北灵院中，可有不少比他更适合的人选。</p>
+			<p>牧尘见到那老头犹豫，心头也是微急，他可是知道这灵诀室秦老头是个极为迂腐顽固的人，他若是看不顺眼的话，还没人能够从他这里把灵诀带出去，而且别看这老头犹如要断气的模样，但其实力，却是货真价实的灵轮境后期，差之一步就能踏入神魄境，曾经有着不少趾高气扬的学员在他手中吃了大亏。</p>
+			<p>在灵诀室大门处，唐芊儿将灵诀登记了一下，那管理着灵诀室的老头见到这暗红色的灵诀，倒是有些诧异的看了唐芊儿一眼，有些犹豫，毕竟这“森罗死印”的凶名太大了一点，虽然唐芊儿符合条件，但他着实不想见到这么水灵的一个少女被这灵诀所害。</p>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.nicescroll.js"></script>
+		<script>
+			$("#lanrenzhijia").niceScroll({
+				cursorcolor: "#fff",//光标颜色
+				cursoropacitymax: 1,//改变不透明度非常光标处于非活动状态
+				touchbehavior: false,//使光标拖动滚动像在台式电脑触摸设备
+				cursorwidth: "10px",//像素光标的宽度
+				cursorborder: "0",//游标边框css定义
+				cursorborderradius: "10px"//以像素为光标边界半径
+			});
+		</script>
+	</body>
+
+</html>

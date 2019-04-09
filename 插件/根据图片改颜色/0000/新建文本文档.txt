@@ -1,0 +1,15 @@
+<script>
+import $ from 'jquery'
+import './js/jq.adaptive-bg'
+	`插件的用法`
+// <div class='img-wrap'>  html写在template中
+	// < img src="../../assets/logo.png" id="img" data-adaptive-background>
+// </div>
+ methods: {
+    test () {
+      $('#img').ready(function () {
+        $.adaptiveBackground.run()
+      })
+    }
+ // 完成如上操作即可根据图片给父元素的盒子添加背景颜色
+</script>

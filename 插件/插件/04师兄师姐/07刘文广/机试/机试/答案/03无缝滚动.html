@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;list-style: none;border: 0;}
+			#imglist{
+				width: 324px;
+				height: 162px;
+				margin: 250px;
+				overflow: hidden;
+			}
+			/*#imglist ul{
+				width: 648px;
+			}*/
+			#imglist li{
+				float: left;
+				width: 150px;
+				padding: 5px;
+				border: 1px solid #ddd;
+			}
+			#imglist li img{
+				display: block;
+			}
+			#btn p{
+				width: 30px;
+				height: 160px;
+				background: #000;
+				display: block;
+			}
+			#btn p a {
+				color: #fff;
+				text-decoration: none;
+				display: block;
+				margin-top: 45px;
+				text-align: center;
+				/*line-height: 160px;*/
+			}
+			#left{
+				position: absolute;
+				left: 216px;
+				top: 252px;
+			}
+			#right{
+				position: absolute;
+				left: 580px;
+				top: 252px;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="../js/Marquee.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#imglist').Marquee({
+					distance:162,//每次动162像素
+					time:3,//每隔3秒动一次
+					btnGo:{//按钮
+						left:'#left',
+						right:'#right'
+					},
+					direction:'left'//运动方向
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="imglist">
+			<ul>
+				<li><a href="javascript:"><img src="images/1.jpg"/></a></li>
+				<li><a href="javascript:"><img src="images/2.jpg"/></a></li>
+				<li><a href="javascript:"><img src="images/3.jpg"/></a></li>
+				<li><a href="javascript:"><img src="images/4.jpg"/></a></li>
+			</ul>
+			
+		</div>
+		<div id="btn">
+			<p id="left"><a href="javascript:">上<br />一<br />页</a></p>
+			<p id="right"><a href="javascript:">下<br />一<br />页</a></p>
+		</div>
+		
+	</body>
+</html>

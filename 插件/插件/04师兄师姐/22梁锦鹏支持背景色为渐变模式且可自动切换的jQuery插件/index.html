@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>支持背景色为渐变模式且可自动切换的jQuery插件</title>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.gradientify.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("body").gradientify({
+			gradients: [
+				{ start: [49,76,172], stop: [242,159,191] },
+				{ start: [255,103,69], stop: [240,154,241] },
+				{ start: [33,229,241], stop: [235,236,117] }
+			]
+		});
+	});
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>
