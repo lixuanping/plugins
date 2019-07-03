@@ -1,0 +1,20 @@
+FileSaver文件是用于导出的  后端会把文件已流的形式放到请求头  导出的是xlsx表格
+需要的用到的页面引入  import saveAs from '@/utils/FileSaver';
+
+userGeneralization.userExport(params).then(res => {
+  if (res) {
+     const b = new Blob([res], { type: 'application/vnd.openxmlformats-          officedocument.spreadsheetml.sheet' });
+     saveAs(b, 'xlsx表格的名字' + '.xlsx');
+  }
+});
+
+utils文件是对于一些方法的封装
+有例如微信的朋友圈时间提示
+parseTime函数可以将标准时间或者时间戳转成  2018-09-02 21:23:55这样的格式
+
+QRCode 插件使用(生成二维码的)
+<div id="qrcode"></div>
+import QRCode from 'qrcodejs2'; 
+document.getElementById('qrcode').innerHTML = ''; // 清除上一次的内容
+const qrcode = new QRCode('qrcode', { text: '这里可以放文字或者图片或者其他',
+width: 140, height: 140 });
